@@ -10,3 +10,6 @@
   echo "<a href='./pageTwo.php'>go to page 2</a>";
 
   echo "<br />" . $_SESSION['username'];
+
+  print_r($_SESSION);
+  echo "<h1>have Car: ". $_SESSION['haveCar'] ."</h1>";
