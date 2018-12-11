@@ -20,6 +20,10 @@
         return $this->info;
     }
 
+    public function __get() {
+
+    }
+
     public function __toString() {
       return $this->getIsLanguage() ? "<br /><br />Welcome to language Sub Class: <br />" . $this->info
       : "<br /><p style='color: red'>You can't create $this->info class</p>";

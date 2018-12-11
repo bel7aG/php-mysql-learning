@@ -17,11 +17,9 @@
       return $this->isLanguage;
     }
 
-
     public function getStatic(){
-        return self::$static;
+        return self::$static + 1;
     }
-
 
     public function __toString() {
       return "<br /><br />Welcome to language Super Class: <br /> Language";
