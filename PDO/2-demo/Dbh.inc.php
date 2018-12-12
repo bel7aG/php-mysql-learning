@@ -31,15 +31,12 @@
           . $this->dbName
           . ';charset='
           . $this->charset;
-
           $myPDO = new PDO($dsn, $this->userName, $this->password);
-
+          $myPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           return $myPDO;
 
         } catch(PDOException $error) {
-
-          echo "<h1 id='e'>We Have Error Here ... <br /> <p style='color: #111; font-size: 2rem; margin-top: 4rem;'>$error.getMessage()</p></h1>";
-
+          echo "<h1 id='e'>We Have Error Here ... <br /><p id='ep'>" . $error->getMessage() . "</p></h1>";
         }
 
       }
