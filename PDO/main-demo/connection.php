@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,6 @@
   <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
-
 
 
   <?php
@@ -22,7 +23,7 @@
         $this->userName = 'root';
         $this->password = 'belhassen123';
         $this->host = 'localhost';
-        $this->dbName = 'my_bd';
+        $this->dbName = 'emp';
         $this->charset = 'utf8mb4';
 
         try {
@@ -36,23 +37,13 @@
 
           $pdo = new PDO($dsn, $this->userName, $this->password);
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          return $pdo;
         } catch(PDOException $error) {
           echo ("<h1 id='e'>ouch problem :( <p>". $error->getMessage() ."</p></h1>");
         }
       }
     }
-
-    $cnx = new Dbh();
-    $cnx->connection();
-
-
   ?>
-
-
-
-
-
-
 
 
 </body>

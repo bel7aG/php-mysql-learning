@@ -19,8 +19,8 @@ tr {
 
 tr:nth-child(odd):not(:first-child):hover {
   border: 0;
-  font-size: 1.7rem;
-  transform: scaleY(1.2);
+  font-size: 1.3rem;
+  padding: 1rem 0;
   background-color: rgb(241, 226, 180) !important;
   color: rgba(255, 145, 0, 0.93) !important;
   cursor: pointer;
@@ -28,7 +28,7 @@ tr:nth-child(odd):not(:first-child):hover {
 
 tr:nth-child(even):hover {
   border: 0;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   padding: 1rem 0;
   background-color: rgb(186, 230, 160) !important;
   color: rgba(4, 93, 48, 0.93) !important;
@@ -45,4 +45,53 @@ tr > th {
 tr:first-child:hover {
   background-color: #222 !important;
   color: #fff;
+  letter-spacing: 2px;
+}
+
+
+nav {
+
+  width: 100vw;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+ul {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 4rem;
+}
+
+ul > * {
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: rgb(32, 32, 30);
+  transition: all .2s;
+  color: #AAA;
+}
+
+ul > *:not(:first-child) {
+  border-left: 1px solid rgb(126, 126, 126);
+}
+
+li:hover {
+  cursor: pointer;
+  letter-spacing: 1px;
+  height: calc(100% + 2rem);
+  color: #FFF;
+}
+
+table {
+  margin-top: 8rem;
 }

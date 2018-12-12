@@ -1,3 +1,9 @@
+<?php
+  function __autoload($class) {
+    require_once "$class";
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,39 +16,52 @@
 </head>
 <body>
   <div class="container box">
-    <div class="heading">
-      <h1 id="heading-primary">Users</h1>
-    </div>
+
+    <header class="header">
+      <nav class="nav">
+        <ul>
+          <li>Lister</li>
+          <li>Ajouter</li>
+          <li>Modifier</li>
+        </ul>
+      </nav>
+    </header>
+
+
     <div class="table-responsive">
       <table id="user-data" class="table table-bordered table-striped">
         <tr >
-          <th width="10%">Image</th>
-          <th width="35%">name</th>
-          <th width="35%">surname</th>
-          <th width="10%">edit</th>
-          <th width="10%">delete</th>
+          <th width="10%">id</th>
+          <th width="20%">name</th>
+          <th width="20%">city</th>
+          <th width="20%">designation</th>
+          <th width="30%">Action</th>
         </tr>
         <tr>
-          <td>a</td>
           <td>b</td>
           <td>c</td>
           <td>c</td>
           <td>c</td>
+          <td>
+            <a href="./edit.php">Edit</a>
+            <a href="./delete.php">Delete</a>
+          </td>
         </tr>
         <tr>
-          <td>c</td>
           <td>c</td>
           <td>a</td>
           <td>b</td>
           <td>c</td>
+          <td>
+            <a href="./edit.php">Edit</a>
+            <a href="./delete.php">Delete</a>
+          </td>
         </tr>
       </table>
     </div>
   </div>
   <script src="js/popper.min.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="js/dataTable.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/main/index.js"></script>
 </body>
 </html>
